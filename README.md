@@ -5,10 +5,7 @@ Learning journals can be found in the LearningJournals-Folder.
 
 Aufgabe E1:
  
-1.) Es erscheinen folgende Sterne: 
-***
-**
-*
+1.) Es erscheinen 6 Sterne.
 
 2.) Ctrl & F8
 
