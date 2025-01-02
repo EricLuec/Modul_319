@@ -1,14 +1,21 @@
 package ch.tbz;
 
-import static ch.tbz.lib.Input.inputFloat;
-import static ch.tbz.lib.Input.inputString;
-import static java.lang.System.*;   // System-IO Library for abbriviation purpose to static functions
-import static java.lang.Math.*;     // Mathematic Library for abbriviation purpose to static functions
-import java.util.*;
+import java.util.Scanner;
 
 public class D3 {
     public static void main(String[] args ) {
-        String satzInput = inputString("Geben sie einen Satz ein: ");
+        Scanner scanner = new Scanner(System.in);
 
+        System.out.println("Gib einen Satz ein:");
+        String input = scanner.nextLine();
+        String[] words = input.split("\\s+");
+
+        System.out.println("Anzahl der Wörter: " + words.length);
+        System.out.println("Die Wörter sind:");
+
+        for (String word : words) {
+            System.out.println(word);
+        }
+        scanner.close();
     }
 }
