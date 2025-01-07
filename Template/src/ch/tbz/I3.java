@@ -11,7 +11,11 @@ public class I3 {
         int firstSide = inputInt("[1] Seite");
         int secondSide = inputInt("[2] Seite");
         int calculatedSpace = firstSide * secondSide;
-        out.println("Ihre Fläche beträgt: " + calculatedSpace + "cm.");
+        if (calculatedSpace <= 0 ) {
+            out.println("Fläche darf nicht negativ oder 0 sein! ");
+        } else  {
+            out.println("Ihre Fläche beträgt: " + calculatedSpace + "cm.");
+        }
     }
 
     // Methode für Gewichtsberechnung
@@ -41,7 +45,11 @@ public class I3 {
         } else if (goalWeightCategory == 3) {
             WeightResult = gramIndicator / 1000000;
         }
-        out.println("Resultat: " + WeightResult);
+        if (weightInput <= 0) {
+            out.println("Resultat darf nicht 0 sein!");
+        } else {
+            out.println("Resultat: " + WeightResult);
+        }
     }
 
     // Methode zur Pythagorasberechnung
@@ -61,7 +69,11 @@ public class I3 {
         } else {
             calculatedSide = (Math.sqrt((firstSide * firstSide) - (secondSide * secondSide)));
         }
-        out.println("Unbekannte Seite: " + calculatedSide);
+        if (calculatedSide <= 0) {
+            out.println("Seite darf nicht 0 oder negativ sein!");
+        } else {
+            out.println("Unbekannte Seite: " + calculatedSide);
+        }
     }
 
     // Mainmethode
@@ -77,7 +89,7 @@ public class I3 {
             // Conditionals welche Methode ausgeführt wird.
             if (functionHolder == 1) {
                 spaceCalc();
-            } else if (functionHolder == 2) {
+            } else if (functionHolder ++== 2) {
                 weightCalculation();
             } else if (functionHolder == 3) {
                 pythagorasCalc();
