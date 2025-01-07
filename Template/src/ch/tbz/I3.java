@@ -4,6 +4,7 @@ import static ch.tbz.lib.Input.*;
 import static java.lang.System.out;
 
 public class I3 {
+
     private static void spaceCalc() {
         out.println("Gebe die Seitenlängen in cm an:");
         int firstSide = inputInt("[1] Seite");
@@ -11,6 +12,7 @@ public class I3 {
         int calculatedSpace = firstSide * secondSide;
         out.println("Ihre Fläche beträgt: " + calculatedSpace + "cm.");
     }
+
     private static void weightCalculation() {
         out.println("Gib die Masseinheit an die du verrechnen Möchtest");
         out.println("[1] KG");
@@ -20,6 +22,7 @@ public class I3 {
         int goalWeightCategory = inputInt("Ziel-Gewichtseinheit");
         int weightInput = inputInt("Geben sie nun das zu verrechnende Gewicht in der entsprechenden Einheit ein");
         double gramIndicator = 0;
+
         if (calculatingWeight == 1) {
             gramIndicator = weightInput * 1000;
         } else if (calculatingWeight == 2) {
@@ -27,6 +30,7 @@ public class I3 {
         } else if (calculatingWeight == 3) {
             gramIndicator = weightInput * 1000000;
         }
+
         double WeightResult = 0;
         if (goalWeightCategory == 1) {
             WeightResult = gramIndicator / 1000;
@@ -37,6 +41,7 @@ public class I3 {
         }
         out.println("Resultat: " + WeightResult);
     }
+
     private static void pythagorasCalc() {
         out.println("Welche Seite des Dreiecks möchtest du berechnen?");
         out.println("[1] Kathete");
@@ -47,6 +52,7 @@ public class I3 {
         int firstSide = inputInt("[1] Seite:");
         int secondSide = inputInt("[2] Seite:");
         double calculatedSide = 0;
+
         if (sideSelector == 3) {
             calculatedSide = (Math.sqrt((firstSide * firstSide) + (secondSide * secondSide)));
         } else {
@@ -54,24 +60,26 @@ public class I3 {
         }
         out.println("Unbekannte Seite: " + calculatedSide);
     }
+
     public static void main(String[] args) {
         boolean rerunProgram;
-            do {
-                out.println("Berechnungsfunktionen:");
-                out.println("[1] Fläche");
-                out.println("[2] Masseinheiten");
-                out.println("[3] Pythagoras");
-                int functionHolder = inputInt("Wähle eine Funktion:");
+        do {
+            out.println("Berechnungsfunktionen:");
+            out.println("[1] Fläche");
+            out.println("[2] Masseinheiten");
+            out.println("[3] Pythagoras");
+            int functionHolder = inputInt("Wähle eine Funktion:");
 
-                if (functionHolder == 1) {
-                    spaceCalc();
-                } else if (functionHolder == 2) {
-                    weightCalculation();
-                } else if (functionHolder == 3) {
-                    pythagorasCalc();
-                }
-                boolean calculateAgain = inputBoolean("Wollen sie nochmals rechnen? ");
-                rerunProgram = calculateAgain;
-             }while (rerunProgram) ;
+            if (functionHolder == 1) {
+                spaceCalc();
+            } else if (functionHolder == 2) {
+                weightCalculation();
+            } else if (functionHolder == 3) {
+                pythagorasCalc();
+            }
+            boolean calculateAgain = inputBoolean("Wollen sie nochmals rechnen? ");
+            rerunProgram = calculateAgain;
+                
+        } while (rerunProgram) ;
     }
 }
