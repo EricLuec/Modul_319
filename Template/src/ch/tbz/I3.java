@@ -5,6 +5,7 @@ import static java.lang.System.out;
 
 public class I3 {
 
+    // methode zur Flächenberechung
     private static void spaceCalc() {
         out.println("Gebe die Seitenlängen in cm an:");
         int firstSide = inputInt("[1] Seite");
@@ -13,6 +14,7 @@ public class I3 {
         out.println("Ihre Fläche beträgt: " + calculatedSpace + "cm.");
     }
 
+    // Methode für Gewichtsberechnung
     private static void weightCalculation() {
         out.println("Gib die Masseinheit an die du verrechnen Möchtest");
         out.println("[1] KG");
@@ -42,6 +44,7 @@ public class I3 {
         out.println("Resultat: " + WeightResult);
     }
 
+    // Methode zur Pythagorasberechnung
     private static void pythagorasCalc() {
         out.println("Welche Seite des Dreiecks möchtest du berechnen?");
         out.println("[1] Kathete");
@@ -61,6 +64,7 @@ public class I3 {
         out.println("Unbekannte Seite: " + calculatedSide);
     }
 
+    // Mainmethode
     public static void main(String[] args) {
         boolean rerunProgram;
         do {
@@ -70,6 +74,7 @@ public class I3 {
             out.println("[3] Pythagoras");
             int functionHolder = inputInt("Wähle eine Funktion:");
 
+            // Conditionals welche Methode ausgeführt wird.
             if (functionHolder == 1) {
                 spaceCalc();
             } else if (functionHolder == 2) {
@@ -77,9 +82,10 @@ public class I3 {
             } else if (functionHolder == 3) {
                 pythagorasCalc();
             }
+            // Check ob das Programm beendet wird oder nochmals ausgeführt.
             boolean calculateAgain = inputBoolean("Wollen sie nochmals rechnen? ");
             rerunProgram = calculateAgain;
-                
+
         } while (rerunProgram) ;
     }
 }
