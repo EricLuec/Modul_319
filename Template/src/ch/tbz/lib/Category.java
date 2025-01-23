@@ -26,6 +26,6 @@ public class Category {
 
     @Override
     public String toString() {
-        return "Task [name=" + name + ", description=" + description + "]";
+        return "Category [name=" + name + ", description=" + description + "]";
     }
 }

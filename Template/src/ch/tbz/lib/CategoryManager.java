@@ -4,41 +4,48 @@ import java.util.ArrayList;
 
 import static ch.tbz.lib.Input.inputInt;
 import static ch.tbz.lib.Input.inputString;
+import static java.lang.System.out;
 
 public class CategoryManager {
-    private ArrayList<Category> categoryList = new ArrayList<>();
+    private ArrayList<Category> listedCategories = new ArrayList<>();
 
     public void addCategory() {
-        String name = inputString("Gib den Namen des Tasks ein");
+        String name = inputString("Gib den Namen der Category ein");
         String description = inputString("Gib die Beschreibung ein");
         Category category = new Category(name, description);
-        categoryList.add(category);
+        listedCategories.add(category);
+        TaskManager taskManager = new TaskManager();
+
     }
 
     public void editCategory() {
         int editCategory = inputInt("Welche Category möchtest du bearbeiten?");
         String newCategoryValue = inputString("Wie soll der Category nun lauten?");
-        //tasks.set(editTask, newTaskValue);
-        System.out.println(categoryList);
+        //listedCategories.set(editCategory, newCategoryValue);
+        System.out.println(listedCategories);
     }
 
     public void deleteCategory() {
         int deleteCategory = inputInt("Welche Category möchtest du löschen?");
-        categoryList.remove(deleteCategory);
+        listedCategories.remove(deleteCategory);
     }
 
     public String getCategory() {
-        if (categoryList.isEmpty()) {
-            return "No tasks available.";
+        if (listedCategories.isEmpty()) {
+            return "No categories available.";
         }
-        StringBuilder categoryList = new StringBuilder();
-        for (Category category : categoryList) {
-            categoryList.append(category.toString()).append("\n");
+        StringBuilder listedCategories = new StringBuilder();
+        for (Category category : this.listedCategories) {
+            listedCategories.append(category.toString()).append("\n");
         }
-        return categoryList.toString();
+        return this.listedCategories.toString();
     }
 
     public void operations() {
+        out.println("Was möchtest du tun?");
+        out.println("[1] Category hinzufügen");
+        out.println("[2] Category bearbeiten");
+        out.println("[3] Category löschen");
         int categoryOptionChoice = inputInt("Gib die Category-Nummer an:");
         if (categoryOptionChoice == 1) {
             addCategory();
@@ -49,7 +56,7 @@ public class CategoryManager {
         }
     }
 
-    public ArrayList<Task> getCategoryList() {
-        return categoryList;
+    public ArrayList<Category> getListedCategories() {
+        return listedCategories;
     }
 }

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import static ch.tbz.lib.Input.inputInt;
 import static ch.tbz.lib.Input.inputString;
+import static java.lang.System.out;
 
 public class TaskManager {
     private ArrayList<Task> tasks = new ArrayList<>();
@@ -40,6 +41,10 @@ public class TaskManager {
     }
 
     public void operations() {
+        out.println("Was möchtest du tun?");
+        out.println("[1] Task hinzufügen");
+        out.println("[2] Task bearbeiten");
+        out.println("[3] Task löschen");
         int taskOptionChoice = inputInt("Gib die Task-Nummer an:");
         if (taskOptionChoice == 1) {
             addTask();
