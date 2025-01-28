@@ -24,7 +24,7 @@ Today I did two test, for which I already started studying at home. And started 
 On this week I started with 3A and also finished it at home. And also did the last Test E2.
 
 ## Week nine
-This week I started and finished D3.
+This week I started and finished D3 and started with I3.
 
 ## Week ten
 Today I continued with I3 and I showed my code, which I did wrong so I spend the rest of the lessons trying to correct my code after the EVA-Prinzip.
