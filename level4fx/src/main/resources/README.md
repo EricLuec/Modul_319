@@ -111,5 +111,3 @@
 - **Erwartetes Ergebnis**:
     - Mehrere Instanzen des gleichen To-Dos ("Einkaufen") werden zur Liste hinzugefügt.
 
-
-# Alinas Projekt finden sie im Branch namens Alina im alina-Folder.
