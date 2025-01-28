@@ -6,7 +6,7 @@ This week we started into a intruduction into the modul an I started into the ta
 I was sick and not at school.
 
 ## Week three 
-I was sick and not at school.
+I was sick and not at school. My plan next week is to catch up on what I missed the past two weeks.
 
 ## Week four
 This week I finished I1 and started with E1.
