@@ -3,6 +3,7 @@ package org.example.level4fx;
 import java.util.ArrayList;
 import java.util.List;
 
+// basic functionality of the todolist with filter functions
 public class TodoList {
     private List<Todo> todos;
 

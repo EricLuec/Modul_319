@@ -30,6 +30,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+        // scene / ui for javafx
         primaryStage.setTitle("Todo Manager");
 
         VBox root = new VBox(10);
@@ -77,6 +78,7 @@ public class Main extends Application {
     }
 
     private void addTodo() {
+        // add to-do function
         String title = titleField.getText();
         String description = descriptionField.getText();
         String category = categoryField.getText();
@@ -90,6 +92,7 @@ public class Main extends Application {
     }
 
     private void markTodoAsDone() {
+        // mark as done function
         String selectedTodo = todoListView.getSelectionModel().getSelectedItem();
         if (selectedTodo != null) {
             for (int i = 0; i < todoList.getTodos().size(); i++) {
@@ -103,6 +106,7 @@ public class Main extends Application {
     }
 
     private void removeTodo() {
+        // remove to-do function
         String selectedTodo = todoListView.getSelectionModel().getSelectedItem();
         if (selectedTodo != null) {
             for (int i = 0; i < todoList.getTodos().size(); i++) {
@@ -116,6 +120,7 @@ public class Main extends Application {
     }
 
     private void searchTodos() {
+        // search for to-do function
         String searchCategory = searchField.getText();
         if (!searchCategory.isEmpty()) {
             List<Todo> filteredTodos = todoList.getTodosByCategory(searchCategory);
@@ -127,6 +132,7 @@ public class Main extends Application {
     }
 
     private void updateTodoListView() {
+        // update to-do view
         todoListView.getItems().clear();
         for (Todo todo : todoList.getTodos()) {
             String todoString = todo.toString();
@@ -138,12 +144,14 @@ public class Main extends Application {
     }
 
     private void clearInputs() {
+        // clears all inputs
         titleField.clear();
         descriptionField.clear();
         categoryField.clear();
     }
 
     private void saveTodosToFile() {
+        // saves the changes
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("todos.txt"))) {
             for (Todo todo : todoList.getTodos()) {
                 writer.write(todo.getTitle() + "|" + todo.getDescription() + "|" + todo.getCategory() + "|" + todo.isDone());

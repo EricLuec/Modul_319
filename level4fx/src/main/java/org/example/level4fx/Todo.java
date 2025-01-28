@@ -2,6 +2,8 @@ package org.example.level4fx;
 
 
 public class Todo {
+
+    // functionality of the todos
     private String title;
     private String description;
     private boolean isDone;
